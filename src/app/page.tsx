@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '@/app/assets/banner.png'
 import Image from 'next/image';
+import LibraryCard from './components/LibraryCard';
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
           <Image src={Hero} alt="Hero" width={334} height={334} />
         </div>
       </div>
+      <LibraryCard />
     </div>
   );
 };
