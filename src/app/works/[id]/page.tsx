@@ -146,8 +146,8 @@ const WorkDetails = async ({params} : IWorkDetailsProps) => {
           </div>
           <div className="mt-5 flex gap-2">
 
-            <AddtoPlanButton />
-            <SaveButton />
+            <AddtoPlanButton work = {work}/>
+            <SaveButton work = {work}/>
 
           </div>
 

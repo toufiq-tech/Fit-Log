@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../assets/logo.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
@@ -11,12 +12,12 @@ const Navbar = () => {
             <h1>FitLog</h1>
           </div> 
           <div className='flex space-x-4'>
-            <button className='hover:bg-green-700'>Workouts</button>
-            <button className='hover:bg-green-700'>My Plan</button>
+            <Link href="/" >Workouts</Link>
+            <Link href="/myplan" >My Plan</Link>
           </div>
           <div className='flex space-x-4'>
-            <h1>Plan</h1>
-            <h1>Saved</h1>
+            <Link href="/myplan" >Plan</Link>
+            <Link href="/myplan" >Saved</Link>
             </div> 
         </div>
         </div>
