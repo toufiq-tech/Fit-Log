@@ -17,7 +17,7 @@ const LibraryCard = async () => {
             <p className="text-white text-[14px] font-bold">Twelve lifts covering every major muscle group.</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
                 {libraryData.map((work: IWorkType, index: number) =>{
-                    return <WorkCard key = {work.id} work={work} />
+                    return <WorkCard key = {index} work={work} />
                 })}
             </div>
         </div>
