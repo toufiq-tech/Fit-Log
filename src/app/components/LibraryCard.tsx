@@ -1,6 +1,7 @@
 import React from 'react';
 import WorkCard from './WorkCard';
 import { IWorkType } from '../types/WorkType';
+import Link from 'next/link';
 
 
 const getLibraryData = async () => {
@@ -17,7 +18,9 @@ const LibraryCard = async () => {
             <p className="text-white text-[14px] font-bold">Twelve lifts covering every major muscle group.</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
                 {libraryData.map((work: IWorkType, index: number) =>{
-                    return <WorkCard key = {index} work={work} />
+                    return <Link key={index} href={`/works/${work.id}`}>
+        <WorkCard work={work} />
+      </Link>
                 })}
             </div>
         </div>
