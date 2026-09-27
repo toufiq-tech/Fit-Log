@@ -1,29 +1,50 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 import { FaRegBookmark } from "react-icons/fa";
-import { IWorkType } from '../types/WorkType';
-import { WorkContext } from '../context/WorkContext';
+import { IWorkType } from "../types/WorkType";
+import { WorkContext } from "../context/WorkContext";
+import { Bounce, toast } from "react-toastify";
 
-const SaveButton = ({work}: {work: IWorkType}) => {
+const SaveButton = ({ work }: { work: IWorkType }) => {
+  const { save, setSave } = React.useContext(WorkContext);
 
-    const {save, setSave} = React.useContext(WorkContext);
+  const isSaved = save.some((item) => item.id === work.id);
 
-    const handleSave = () => {
-        setSave([...save, work]);
-        alert(`${work.name} has been saved for later!`);
-    };
+  const handleSave = () => {
+    if (isSaved) return;
 
-    return (
-        <div>
-            <button
-              className="flex items-center gap-1 rounded-2xl  px-3  py-2 text-[14px] font-medium text-white transition hover:bg-[#1d2025]"
-                onClick={() => handleSave()}
-            >
-              <FaRegBookmark /> Save for later
-            </button>
-        </div>
-    );
+    setSave((prev) => [...prev, work]);
+
+    toast.success(`${work.name} has been saved for later!`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  };
+
+  return (
+    <div>
+      <button
+        onClick={handleSave}
+        disabled={isSaved}
+        className={`flex items-center gap-1 rounded-2xl px-3 py-2 text-[14px] font-medium text-white transition ${
+          isSaved
+            ? "cursor-not-allowed bg-gray-500 opacity-50"
+            : "hover:bg-[#1d2025]"
+        }`}
+      >
+        <FaRegBookmark />
+        {isSaved ? "Saved" : "Save for later"}
+      </button>
+    </div>
+  );
 };
 
 export default SaveButton;

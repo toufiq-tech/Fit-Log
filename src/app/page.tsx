@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '@/app/assets/banner.png'
 import Image from 'next/image';
 import LibraryCard from './components/LibraryCard';
+import Link from 'next/link';
 
 const page = () => {
   return (
@@ -12,7 +13,7 @@ const page = () => {
           <h1 className='text-white text-[50px] font-bold'>TRAIN WITH INTENT. LOG <br/> EVERY SET</h1>
           <p className='text-gray-300 py-8'>FitLog is a dark, no-nonsense gym companion: pick a lift, lock it <br/>
              into today's plan, and watch the week's work add up.</p>
-             <button className='bg-lime-400 hover:bg-lime-600 font-bold py-2 px-4 rounded'>Browse Workouts</button>
+             <Link href="#Library" className='bg-lime-400 hover:bg-lime-600 font-bold py-2 px-4 rounded'>Browse Workouts</Link>
         </div>
         <div>
           <Image src={Hero} alt="Hero" width={334} height={334} />

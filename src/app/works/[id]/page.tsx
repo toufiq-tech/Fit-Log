@@ -10,7 +10,7 @@ interface IWorkDetailsProps {
     };
 }
 const getWorkDetails = async () => {
-    const res = await fetch(`https://api.abcz.workers.dev/api/fitlog`);
+    const res = await fetch(`https://api.api-store.workers.dev/api/fitlog`);
     const data = await res.json();
     return data;
 }
@@ -54,7 +54,6 @@ const WorkDetails = async ({params} : IWorkDetailsProps) => {
           </div>
           <div className="mt-4 overflow-hidden rounded-smborder border-[#272a30] bg-[#15171c]">
 
-            {/* Equipment */}
             <div className="flex items-center justify-between border-b border-[#272a30] px-3 py-2">
               <span className="text-[14px] text-bold uppercase tracking-wide text-[#777b84]">
                 Equipment
@@ -101,7 +100,6 @@ const WorkDetails = async ({params} : IWorkDetailsProps) => {
               </span>
             </div>
 
-            {/* Calories */}
             <div className="flex items-center justify-between border-b border-[#272a30] px-3 py-2">
               <span className="text-[14px] uppercase tracking-wide text-[#777b84]">
                 Calories

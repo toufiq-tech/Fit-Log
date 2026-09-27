@@ -8,10 +8,8 @@ interface IWorkCardProps {
 
 const WorkCard = ({ work }: IWorkCardProps) => {
     return (
-        <div className="w-full max-w-[470px] overflow-hidden rounded-[20px] border border-[#292d35] bg-[#15171c] text-white shadow-lg">
-
-      {/* Image */}
-      <div className="h-[230px] w-full overflow-hidden">
+        <div className="w-full max-w-120 overflow-hidden rounded-[20px] border border-[#292d35] bg-[#15171c] text-white shadow-lg">
+      <div className="h-60 w-full overflow-hidden">
         <Image
           width={400}
           height={350}
@@ -21,10 +19,8 @@ const WorkCard = ({ work }: IWorkCardProps) => {
         />
       </div>
 
-      {/* Card Content */}
       <div className="px-7 py-7">
 
-        {/* Muscle Groups */}
         <div className="mb-5 flex gap-2.5">
           {work.muscleGroups.map((muscle) => (
             <span
@@ -36,23 +32,18 @@ const WorkCard = ({ work }: IWorkCardProps) => {
           ))}
         </div>
 
-        {/* Workout Name */}
         <h2 className="mb-1 text-[23px] font-extrabold uppercase tracking-wide">
           {work.name}
         </h2>
 
-        {/* Equipment */}
         <p className="text-[15px] text-[#858993]">
           {work.equipment}
         </p>
 
-        {/* Divider */}
         <div className="my-5 h-px bg-[#292d35]" />
 
-        {/* Bottom Information */}
         <div className="flex items-center gap-5 text-[14px] text-[#9da2ad]">
 
-          {/* Duration */}
           <div className="flex items-center gap-2">
             <svg
               width="17"
@@ -69,7 +60,6 @@ const WorkCard = ({ work }: IWorkCardProps) => {
             <span>{work.duration} min</span>
           </div>
 
-          {/* Calories */}
           <div className="flex items-center gap-2">
             <svg
               width="17"
@@ -83,7 +73,6 @@ const WorkCard = ({ work }: IWorkCardProps) => {
             <span>{work.caloriesBurned} kcal</span>
           </div>
 
-          {/* Rating */}
           <div className="flex items-center gap-2">
             <svg
               width="18"
