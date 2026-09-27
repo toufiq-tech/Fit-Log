@@ -75,13 +75,11 @@ const MyPlan = () => {
     };
 
     const handleDone = (id: number) => {
-        setDoneIds((prev) => {
-            if (prev.includes(id)) {
-                return prev.filter((item) => item !== id);
-            }
+        if (doneIds.includes(id)) {
+        return;
+    }
 
-            return [...prev, id];
-        });
+    setDoneIds((prev) => [...prev, id]);
 
         toast.success(`Exercise marked as done`, {
             position: "top-right",
