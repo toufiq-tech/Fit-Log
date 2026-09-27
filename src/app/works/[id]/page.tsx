@@ -24,25 +24,25 @@ const WorkDetails = async ({params} : IWorkDetailsProps) => {
     return (
         <div>
             <div className="min-h-screen bg-[#0d0f12] px-4 py-8 text-white">
-      <div className="mx-auto flex w-full max-w-265 gap-5">
+      <div className="mx-auto flex w-full max-w-265 flex-col gap-8 md:flex-row md:gap-5">
 
-        <div className="w-[47%] shrink-0">
+        <div className="w-full shrink-0 md:w-[47%]">
           <Image
           height={700}
           width={500}
             src={work.image}
             alt={work.name}
-            className="h-110 w-full rounded-[5px] object-cover"
+            className="h-75 sm:h-90 md:h-110 w-full rounded-[5px] object-cover"
           />
         </div>
         <div className="flex-1">
-          <h1 className="text-[36px] font-extrabold uppercase leading-tight tracking-wide">
+          <h1 className="text-[28px] sm:text-[32px] md:text-[36px] font-extrabold uppercase leading-tight tracking-wide">
             {work.name}
           </h1>
-          <p className="mt-2 max-w-130 text-[16px] leading-[1.6] text-[#858993]">
+          <p className="mt-2 max-w-130 text-[14px] sm:text-[15px] md:text-[16px] leading-[1.6] text-[#858993]">
             {work.description}
           </p>
-          <div className="mt-3 flex gap-1.5">
+          <div className="mt-3 flex flex-wrap gap-1.5">
             {work.muscleGroups.map((muscle) => (
               <span
                 key={muscle}
@@ -142,7 +142,7 @@ const WorkDetails = async ({params} : IWorkDetailsProps) => {
             </ol>
 
           </div>
-          <div className="mt-5 flex gap-2">
+          <div className="mt-5 flex flex-col sm:flex-row gap-2">
 
             <AddtoPlanButton work = {work}/>
             <SaveButton work = {work}/>
