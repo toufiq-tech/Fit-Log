@@ -35,13 +35,15 @@ Add exercises to your personal plan and organize the workouts you want to perfor
 
 Each workout provides useful information such as targeted muscle groups, required equipment, estimated duration, and calorie information.
 
-### 4. 📱 Responsive & Modern UI
+### 4. 📊 Workout Progress Tracking
+
+Keep track of your workout activities and monitor your training progress over time, making it easier to stay consistent with your fitness goals.
+
+### 5. 📱 Responsive & Modern UI
 
 A clean, dark-themed interface designed to provide a simple and focused workout-planning experience across different screen sizes.
 
-### 5. 📊 Workout Progress Tracking
 
-Keep track of your workout activities and monitor your training progress over time, making it easier to stay consistent with your fitness goals.
 
 ---
 
