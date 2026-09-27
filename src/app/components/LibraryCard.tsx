@@ -13,7 +13,7 @@ const getLibraryData = async () => {
 const LibraryCard = async () => {
     const libraryData = await getLibraryData();
     return (
-        <div id="Library" className='container mx-auto'>
+        <div id="Library" className='container mx-auto py-10'>
             <h1 className="text-white text-[30px] font-bold">The Library</h1>
             <p className="text-white text-[14px] font-bold">Twelve lifts covering every major muscle group.</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>

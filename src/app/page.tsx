@@ -6,7 +6,7 @@ import Link from 'next/link';
  
 const page = () => { 
   return ( 
-    <div className='bg-gray-950'> 
+    <div className='bg-gray-950 py-10'> 
       <div className='container mx-auto flex flex-col md:flex-row justify-between items-center py-10 md:py-20 bg-gray-800 rounded-3xl px-4 sm:px-6 md:px-8'> 
         <div className='w-full md:w-auto text-center md:text-left'> 
           <p className='text-lime-400 text-[11px] font-bold'>Workout Library</p> 

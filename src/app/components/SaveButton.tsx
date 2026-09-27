@@ -28,7 +28,7 @@ const SaveButton = ({ work }: { work: IWorkType }) => {
       transition: Bounce,
     });
   };
-
+ 
   return (
     <div>
       <button
@@ -37,7 +37,7 @@ const SaveButton = ({ work }: { work: IWorkType }) => {
         className={`flex items-center gap-1 rounded-2xl px-3 py-2 text-[14px] font-medium text-white transition ${
           isSaved
             ? "cursor-not-allowed bg-gray-500 opacity-50"
-            : "hover:bg-[#1d2025]"
+            : "hover:bg-[#1d2025] border border-gray-700"
         }`}
       >
         <FaRegBookmark />
