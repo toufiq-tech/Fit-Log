@@ -252,10 +252,9 @@ const MyPlan = () => {
                                     <div className="flex w-full shrink-0 items-center justify-end gap-2 sm:w-auto">
 
                                         <Link
-                                            href={`/works/${work.id}`}
-                                            className="hidden rounded-full border border-[#303744] px-4 py-2 text-[10px] text-white transition hover:bg-[#20252d] sm:block"
-                                        >
-                                            View Details
+                                         href={`/works/${work.id}`}
+                                         className="rounded-full border border-[#303744] px-3 py-2 text-[9px] text-white transition hover:bg-[#20252d] sm:px-4 sm:text-[10px]">
+                                         View Details
                                         </Link>
 
                                         <button
