@@ -62,16 +62,16 @@ const MyPlan = () => {
         );
 
         toast.warn(`Exercise removed from plan`, {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "light",
-transition: Bounce,
-});
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        });
     };
 
     const handleDone = (id: number) => {
@@ -84,73 +84,73 @@ transition: Bounce,
         });
 
         toast.success(`Exercise marked as done`, {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "light",
-transition: Bounce,
-});
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        });
     };
 
     return (
-        <div className="min-h-screen bg-[#0b0d10] px-4 py-8 text-white">
+        <div className="min-h-screen bg-[#0b0d10] px-3 py-6 text-white sm:px-4 sm:py-8">
             <div className="mx-auto max-w-5xl">
 
                 <div className="mb-5">
-                    <h1 className="text-2xl font-bold uppercase tracking-wide">
+                    <h1 className="text-xl font-bold uppercase tracking-wide sm:text-2xl">
                         MY PLAN
                     </h1>
 
-                    <p className="mt-1 text-xs text-[#858993]">
+                    <p className="mt-1 text-[10px] text-[#858993] sm:text-xs">
                         Cap of five lifts for today. Finish them, then load more.
                     </p>
                 </div>
 
                 <div className="mb-5 grid grid-cols-3 rounded-xl border border-[#252a32] bg-[#12151b]">
 
-                    <div className="border-r border-[#252a32] px-4 py-5">
-                        <p className="text-[10px] text-[#858993]">
+                    <div className="border-r border-[#252a32] px-2 py-4 sm:px-4 sm:py-5">
+                        <p className="text-[9px] text-[#858993] sm:text-[10px]">
                             Exercises
                         </p>
 
-                        <p className="mt-1 text-2xl font-bold text-lime-400">
+                        <p className="mt-1 text-xl font-bold text-lime-400 sm:text-2xl">
                             {works.length}
                         </p>
                     </div>
 
-                    <div className="border-r border-[#252a32] px-4 py-5">
-                        <p className="text-[10px] text-[#858993]">
+                    <div className="border-r border-[#252a32] px-2 py-4 sm:px-4 sm:py-5">
+                        <p className="text-[9px] text-[#858993] sm:text-[10px]">
                             Minutes
                         </p>
 
-                        <p className="mt-1 text-2xl font-bold">
+                        <p className="mt-1 text-xl font-bold sm:text-2xl">
                             {totalMinutes}
                         </p>
                     </div>
 
-                    <div className="px-4 py-5">
-                        <p className="text-[10px] text-[#858993]">
+                    <div className="px-2 py-4 sm:px-4 sm:py-5">
+                        <p className="text-[9px] text-[#858993] sm:text-[10px]">
                             Calories
                         </p>
 
-                        <p className="mt-1 text-2xl font-bold">
+                        <p className="mt-1 text-xl font-bold sm:text-2xl">
                             {totalCalories}
                         </p>
                     </div>
 
                 </div>
 
-                <div className="mb-4 flex items-center justify-between">
+                <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
 
-                    <div className="flex rounded-lg border border-[#252a32] bg-[#12151b] p-1">
+                    <div className="flex w-fit rounded-lg border border-[#252a32] bg-[#12151b] p-1">
 
                         <button
                             onClick={() => setActiveTab("plan")}
-                            className={`rounded-md px-4 py-2 text-[11px] font-medium transition ${
+                            className={`rounded-md px-3 py-2 text-[10px] font-medium transition sm:px-4 sm:text-[11px] ${
                                 activeTab === "plan"
                                     ? "bg-[#20252d] text-white"
                                     : "text-[#858993] hover:text-white"
@@ -161,7 +161,7 @@ transition: Bounce,
 
                         <button
                             onClick={() => setActiveTab("saved")}
-                            className={`rounded-md px-4 py-2 text-[11px] font-medium transition ${
+                            className={`rounded-md px-3 py-2 text-[10px] font-medium transition sm:px-4 sm:text-[11px] ${
                                 activeTab === "saved"
                                     ? "bg-[#20252d] text-white"
                                     : "text-[#858993] hover:text-white"
@@ -183,7 +183,7 @@ transition: Bounce,
                             onChange={(e) =>
                                 setSortBy(e.target.value as SortType)
                             }
-                            className="rounded-lg border border-[#252a32] bg-[#12151b] px-3 py-2 text-[11px] text-white outline-none"
+                            className="w-full rounded-lg border border-[#252a32] bg-[#12151b] px-3 py-2 text-[10px] text-white outline-none sm:w-auto sm:text-[11px]"
                         >
                             <option value="duration">Duration</option>
                             <option value="calories">Calories</option>
@@ -204,17 +204,17 @@ transition: Bounce,
                             return (
                                 <div
                                     key={`${activeTab}-${work.id}-${index}`}
-                                    className={`flex items-center gap-3 rounded-xl border border-[#252a32] bg-[#12151b] p-3 transition ${
+                                    className={`flex flex-col gap-3 rounded-xl border border-[#252a32] bg-[#12151b] p-3 transition sm:flex-row sm:items-center ${
                                         isDone ? "opacity-60" : ""
                                     }`}
                                 >
 
                                     <Image
-                                    height={80}
-                                    width={140}
+                                        height={80}
+                                        width={140}
                                         src={work.image}
                                         alt={work.name}
-                                        className="h-14 w-24 rounded-lg object-cover"
+                                        className="h-40 w-full rounded-lg object-cover sm:h-14 sm:w-24"
                                     />
 
                                     <div className="min-w-0 flex-1">
@@ -233,13 +233,13 @@ transition: Bounce,
                                             {work.equipment}
                                         </p>
 
-                                        <div className="mt-2 flex items-center gap-3 text-[10px]">
+                                        <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] sm:gap-3">
 
                                             <span className="text-lime-400">
                                                 ◷ {work.duration} min
                                             </span>
 
-                                            <span className="text-lime-400 flex">
+                                            <span className="flex text-lime-400">
                                                 <PiFireSimpleFill/> {work.caloriesBurned} kcal
                                             </span>
 
@@ -251,7 +251,7 @@ transition: Bounce,
 
                                     </div>
 
-                                    <div className="flex shrink-0 items-center gap-2">
+                                    <div className="flex w-full shrink-0 items-center justify-end gap-2 sm:w-auto">
 
                                         <Link
                                             href={`/works/${work.id}`}
@@ -262,7 +262,7 @@ transition: Bounce,
 
                                         <button
                                             onClick={() => handleDone(work.id)}
-                                            className={`rounded-full px-4 py-2 text-[10px] font-semibold transition ${
+                                            className={`rounded-full px-3 py-2 text-[9px] font-semibold transition sm:px-4 sm:text-[10px] ${
                                                 isDone
                                                     ? "bg-[#20252d] text-lime-400"
                                                     : "bg-lime-400 text-black hover:bg-lime-300"
@@ -287,7 +287,7 @@ transition: Bounce,
                             );
                         })
                     ) : (
-                        <div className="flex min-h-62 flex-col items-center justify-center rounded-xl border border-dashed border-[#252a32] bg-[#0e1116] text-center">
+                        <div className="flex min-h-62 flex-col items-center justify-center rounded-xl border border-dashed border-[#252a32] bg-[#0e1116] px-4 text-center">
 
                             <h2 className="text-sm font-bold">
                                 NOTHING HERE YET
